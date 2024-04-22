@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import models.Message;
+import java.sql.Timestamp;
+import javax.persistence.EntityManager;
+import utils.DBUtil;
 
 @WebServlet("/new")
 public class NewServlet extends HttpServlet {
@@ -21,6 +24,7 @@ public class NewServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         // CSRF対策
         request.setAttribute("_token", request.getSession().getId());
 

@@ -3,6 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <c:import url="../layout/app.jsp">
     <c:param name="content">
+    
      <c:choose>
             <c:when test="${message != null}">
                 <h2>id : ${message.id} のメッセージ詳細ページ</h2>
